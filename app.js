@@ -1,5 +1,5 @@
 const state = { community: null, status: null };
-const apiBase = "https://pal.xero-x.me";
+const apiBase = "https://pal-api.xero-x.me";
 const apiUrl = (path) => `${apiBase}${path}`;
 const pendingAddress = "公開準備中";
 const fetchTimeoutMs = 8000;
