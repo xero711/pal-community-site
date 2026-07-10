@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Palworld Community Server の公式コミュニティページ">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://pal.xero-x.me; img-src 'self' data:; script-src 'self'; style-src 'self'; base-uri 'self'">
+  <link rel="canonical" href="https://pal.xero-x.me/">
+  <title>Palworld Community</title>
+  <link rel="stylesheet" href="./site.css?v=20260711-3">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a class="brand" href="#top">パルワールド コミュニティ</a>
+      <a href="#status">サーバー状況</a>
+      <a href="#join">参加方法</a>
+      <a href="#rules">ルール</a>
+    </nav>
+    <div class="hero-content" id="top">
+      <p class="eyebrow">公式コミュニティ</p>
+      <h1 id="community-name">Palworld Community</h1>
+      <p class="tagline" id="community-tagline">みんなでつくる、安心して遊べるPalworldサーバー。</p>
+      <a class="button" href="#join">サーバーに参加する</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section status-section" id="status" aria-labelledby="status-title">
+      <div class="section-heading">
+        <p class="eyebrow">リアルタイム情報</p>
+        <h2 id="status-title">サーバー状況</h2>
+        <p id="server-identity" class="server-identity">サーバー情報を読み込んでいます…</p>
+        <p id="status-message" class="status-message">接続状況を確認しています…</p>
+      </div>
+      <div class="status-grid">
+        <article class="card status-card">
+          <span class="status-indicator" id="status-indicator"></span>
+          <p class="label">ステータス</p>
+          <strong id="status-label">確認中</strong>
+          <small id="updated-at">—</small>
+        </article>
+        <article class="card"><p class="label">現在の参加者</p><strong id="player-count">—</strong><small>オンライン人数</small></article>
+        <article class="card"><p class="label">サーバーFPS</p><strong id="server-fps">—</strong><small>安定性の目安</small></article>
+        <article class="card"><p class="label">フレーム時間</p><strong id="frame-time">—</strong><small>1フレームの処理時間</small></article>
+        <article class="card"><p class="label">連続稼働時間</p><strong id="uptime">—</strong><small>現在の起動からの時間</small></article>
+        <article class="card"><p class="label">ワールド日数</p><strong id="world-days">—</strong><small>ゲーム内の日数</small></article>
+      </div>
+    </section>
+
+    <section class="section join-section" id="join" aria-labelledby="join-title">
+      <div>
+        <p class="eyebrow">参加する</p>
+        <h2 id="join-title">参加方法</h2>
+        <p>Palworld のマルチプレイ画面から、以下のサーバーアドレスへ接続してください。</p>
+      </div>
+      <div class="address-box">
+        <span id="game-address">公開準備中</span>
+        <button id="copy-address" type="button">アドレスをコピー</button>
+      </div>
+      <p class="notice">接続先は公開完了後に表示されます。管理API、IPアドレス、アカウントID、座標などの非公開情報は外部へ送信しません。</p>
+    </section>
+
+    <section class="section players-section" aria-labelledby="players-title">
+      <div class="section-heading row-heading">
+        <div>
+          <p class="eyebrow">参加者</p>
+          <h2 id="players-title">現在の参加者</h2>
+        </div>
+        <span id="players-summary" class="muted">—</span>
+      </div>
+      <div id="players-list" class="players-list" aria-live="polite">
+        <p class="empty">参加者情報を読み込んでいます…</p>
+      </div>
+    </section>
+
+    <section class="section rules-section" id="rules" aria-labelledby="rules-title">
+      <p class="eyebrow">コミュニティルール</p>
+      <h2 id="rules-title">コミュニティルール</h2>
+      <ol id="rules-list" class="rules-list"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <span>パルワールド コミュニティ公式ページ</span>
+    <span id="server-version"></span>
+  </footer>
+  <script src="./app.js?v=20260711-3" defer></script>
+</body>
+</html>
