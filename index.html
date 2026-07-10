@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Palworld Community Server の公式コミュニティページ">
+  <meta name="description" content="パルワールド コミュニティサーバーの公式ページ">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://pal.xero-x.me; img-src 'self' data:; script-src 'self'; style-src 'self'; base-uri 'self'">
-  <link rel="canonical" href="https://pal.xero-x.me/">
-  <title>Palworld Community</title>
-  <link rel="stylesheet" href="./site.css?v=20260711-3">
+  <link rel="canonical" href="https://community.xero-x.me/">
+  <title>パルワールド コミュニティ</title>
+  <link rel="stylesheet" href="./site.css?v=20260711-4">
 </head>
 <body>
   <header class="hero">
@@ -19,8 +19,8 @@
     </nav>
     <div class="hero-content" id="top">
       <p class="eyebrow">公式コミュニティ</p>
-      <h1 id="community-name">Palworld Community</h1>
-      <p class="tagline" id="community-tagline">みんなでつくる、安心して遊べるPalworldサーバー。</p>
+      <h1 id="community-name">パルワールド コミュニティ</h1>
+      <p class="tagline" id="community-tagline">みんなでつくる、安心して遊べるパルワールドサーバー。</p>
       <a class="button" href="#join">サーバーに参加する</a>
     </div>
   </header>
@@ -41,7 +41,7 @@
           <small id="updated-at">—</small>
         </article>
         <article class="card"><p class="label">現在の参加者</p><strong id="player-count">—</strong><small>オンライン人数</small></article>
-        <article class="card"><p class="label">サーバーFPS</p><strong id="server-fps">—</strong><small>安定性の目安</small></article>
+        <article class="card"><p class="label">サーバー処理速度</p><strong id="server-fps">—</strong><small>1秒あたりの処理回数</small></article>
         <article class="card"><p class="label">フレーム時間</p><strong id="frame-time">—</strong><small>1フレームの処理時間</small></article>
         <article class="card"><p class="label">連続稼働時間</p><strong id="uptime">—</strong><small>現在の起動からの時間</small></article>
         <article class="card"><p class="label">ワールド日数</p><strong id="world-days">—</strong><small>ゲーム内の日数</small></article>
@@ -52,13 +52,16 @@
       <div>
         <p class="eyebrow">参加する</p>
         <h2 id="join-title">参加方法</h2>
-        <p>Palworld のマルチプレイ画面から、以下のサーバーアドレスへ接続してください。</p>
+        <p>パルワールドのマルチプレイ画面から、以下のサーバーアドレスへ接続してください。</p>
       </div>
-      <div class="address-box">
-        <span id="game-address">公開準備中</span>
-        <button id="copy-address" type="button">アドレスをコピー</button>
+      <div class="address-panel">
+        <div class="address-box">
+          <span id="game-address">公開準備中</span>
+          <button id="copy-address" type="button" aria-describedby="address-feedback" disabled>公開準備中</button>
+        </div>
+        <p id="address-feedback" class="address-feedback" role="status" aria-live="polite">サーバーアドレスは現在、公開準備中です。</p>
       </div>
-      <p class="notice">接続先は公開完了後に表示されます。管理API、IPアドレス、アカウントID、座標などの非公開情報は外部へ送信しません。</p>
+      <p class="notice">接続先は公開完了後に表示されます。管理用の認証情報、非公開アドレス、アカウント識別子、座標などは外部へ送信しません。</p>
     </section>
 
     <section class="section players-section" aria-labelledby="players-title">
@@ -85,6 +88,6 @@
     <span>パルワールド コミュニティ公式ページ</span>
     <span id="server-version"></span>
   </footer>
-  <script src="./app.js?v=20260711-3" defer></script>
+  <script src="./app.js?v=20260711-4" defer></script>
 </body>
 </html>
