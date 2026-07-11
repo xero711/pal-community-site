@@ -3,91 +3,338 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="パルワールド コミュニティサーバーの公式ページ">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://pal-api.xero-x.me; img-src 'self' data:; script-src 'self'; style-src 'self'; base-uri 'self'">
+  <meta name="theme-color" content="#050b14">
+  <meta name="description" content="初心者歓迎の非公式パルワールド・コミュニティサーバー。リアルタイムの稼働状況を確認して、pal.xero-x.me:8211 から冒険に参加できます。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="XERO PALWORLD COMMUNITY">
+  <meta property="og:title" content="XERO PALWORLD COMMUNITY｜初心者歓迎">
+  <meta property="og:description" content="はじめてでも大丈夫。仲間と一緒に、パルパゴス島の冒険を始めよう。">
+  <meta property="og:url" content="https://community.xero-x.me/">
+  <meta property="og:image" content="https://community.xero-x.me/assets/og-community.png">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="933">
+  <meta property="og:image:alt" content="夜明けの島を望む冒険者たちと、XERO PALWORLD COMMUNITY 初心者歓迎の文字">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="XERO PALWORLD COMMUNITY｜初心者歓迎">
+  <meta name="twitter:description" content="はじめてでも大丈夫。仲間と一緒に、パルパゴス島の冒険を始めよう。">
+  <meta name="twitter:image" content="https://community.xero-x.me/assets/og-community.png">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://pal-api.xero-x.me; img-src 'self' data:; script-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'; frame-ancestors 'none'">
   <link rel="canonical" href="https://community.xero-x.me/">
-  <title>パルワールド コミュニティ</title>
-  <link rel="stylesheet" href="./site.css?v=20260711-4">
+  <link rel="preload" as="image" href="./assets/hero-flight.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="./site.css?v=20260711-6">
+  <title>XERO PALWORLD COMMUNITY｜初心者歓迎</title>
 </head>
 <body>
-  <header class="hero">
-    <nav class="nav" aria-label="メインナビゲーション">
-      <a class="brand" href="#top">パルワールド コミュニティ</a>
-      <a href="#status">サーバー状況</a>
-      <a href="#join">参加方法</a>
-      <a href="#rules">ルール</a>
-    </nav>
-    <div class="hero-content" id="top">
-      <p class="eyebrow">公式コミュニティ</p>
-      <h1 id="community-name">パルワールド コミュニティ</h1>
-      <p class="tagline" id="community-tagline">みんなでつくる、安心して遊べるパルワールドサーバー。</p>
-      <a class="button" href="#join">サーバーに参加する</a>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+
+  <header class="hero-scene" id="top" data-scene>
+    <canvas id="ambient-particles" aria-hidden="true"></canvas>
+    <div class="hero-media" data-depth="0.14" aria-hidden="true">
+      <img src="./assets/hero-flight.jpg" width="1920" height="1080" alt="" fetchpriority="high">
     </div>
+    <div class="hero-haze hero-haze--far" data-depth="0.25" aria-hidden="true"></div>
+    <div class="hero-haze hero-haze--near" data-depth="0.48" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="メインナビゲーション">
+      <a class="brand" href="#top" aria-label="XERO PALWORLD COMMUNITY ホーム">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-copy"><strong>XERO</strong><small>PALWORLD COMMUNITY</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+        <span class="sr-only">メニューを開く</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <div class="nav-menu" id="nav-menu" data-nav-menu>
+        <a href="#join">参加方法</a>
+        <a href="#features">初心者向け設定</a>
+        <a href="#status">サーバー状況</a>
+        <a href="#rules">ルール</a>
+        <a class="nav-cta" href="#join">冒険に参加</a>
+      </div>
+    </nav>
+
+    <div class="hero-layout section-shell">
+      <div class="hero-copy" data-reveal="up">
+        <div class="hero-kicker"><span class="kicker-dot" aria-hidden="true"></span>非公式ファン運営・初心者歓迎</div>
+        <p class="community-label" id="community-name">パルワールド コミュニティ</p>
+        <h1><span class="hero-line hero-line--light">はじめてでも、</span><span class="hero-line hero-line--accent">この世界が好きになる。</span></h1>
+        <p class="hero-tagline" id="community-tagline">みんなでつくる、安心して遊べるパルワールドサーバー。</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#join">
+            <span>3ステップで参加</span><span class="button-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="button button--ghost" href="#status">いまの稼働状況</a>
+        </div>
+        <ul class="hero-facts" aria-label="初心者向け設定">
+          <li><strong>5<span>倍</span></strong>経験値</li>
+          <li><strong>3.5<span>倍</span></strong>捕獲率</li>
+          <li><strong>なし</strong>デスペナルティ</li>
+        </ul>
+      </div>
+
+      <aside class="quick-join" data-reveal="scale" data-delay="1" aria-label="クイック参加">
+        <div class="quick-join__orb" aria-hidden="true"><span></span></div>
+        <div class="quick-join__topline">
+          <span class="live-pill"><span class="status-indicator" id="status-indicator"></span><strong id="status-label">確認中</strong></span>
+          <span class="quick-join__players"><b id="player-count">—</b> PLAYERS</span>
+        </div>
+        <p class="quick-join__eyebrow">DIRECT CONNECT</p>
+        <p class="quick-join__title">冒険の入口はこちら</p>
+        <div class="server-address">
+          <code id="game-address" data-game-address>公開準備中</code>
+          <button id="copy-address" type="button" data-copy-address aria-describedby="address-feedback" disabled>
+            <span class="copy-icon" aria-hidden="true"></span><span data-copy-label>準備中</span>
+          </button>
+        </div>
+        <p id="address-feedback" class="address-feedback" role="status" aria-live="polite">サーバーアドレスを確認しています。</p>
+        <div class="quick-join__footer">
+          <span><i aria-hidden="true"></i>最大32人</span>
+          <span id="updated-at" data-updated-at>最終更新 —</span>
+        </div>
+      </aside>
+    </div>
+
+    <a class="scroll-cue" href="#join"><span>SCROLL TO EXPLORE</span><i aria-hidden="true"></i></a>
   </header>
 
-  <main>
+  <main id="main-content">
+    <section class="section section-shell join-section" id="join" aria-labelledby="join-title">
+      <div class="section-intro section-intro--center" data-reveal="up">
+        <p class="eyebrow"><span>01</span> JOIN THE WORLD</p>
+        <h2 id="join-title">迷わず、3ステップで参加。</h2>
+        <p>難しい設定はありません。遊んでいる機種を選んで、表示された手順どおりに進めてください。</p>
+      </div>
+
+      <div class="platform-tabs" data-reveal="up" data-delay="1">
+        <div class="tab-list" role="tablist" aria-label="参加する機種">
+          <button id="tab-pc" type="button" role="tab" aria-selected="true" aria-controls="panel-pc" tabindex="0" data-platform-tab="pc"><span aria-hidden="true">⌨</span> PC版</button>
+          <button id="tab-console" type="button" role="tab" aria-selected="false" aria-controls="panel-console" tabindex="-1" data-platform-tab="console"><span aria-hidden="true">▣</span> Xbox / PS5</button>
+        </div>
+
+        <div id="panel-pc" class="tab-panel" role="tabpanel" aria-labelledby="tab-pc" data-platform-panel="pc">
+          <ol class="steps-grid">
+            <li class="step-card" data-reveal="up" data-delay="1" data-tilt>
+              <div class="tilt-surface"><div class="tilt-content">
+                <span class="step-number">01</span><span class="step-icon" aria-hidden="true">⌁</span>
+                <h3>アドレスをコピー</h3>
+                <p>下のボタンを押すだけ。半角のコロンとポート番号も一緒にコピーされます。</p>
+              </div></div>
+            </li>
+            <li class="step-card" data-reveal="up" data-delay="2" data-tilt>
+              <div class="tilt-surface"><div class="tilt-content">
+                <span class="step-number">02</span><span class="step-icon" aria-hidden="true">▷</span>
+                <h3>マルチプレイを開く</h3>
+                <p>タイトル画面から「マルチプレイに参加する」を選び、専用サーバー一覧を開きます。</p>
+              </div></div>
+            </li>
+            <li class="step-card" data-reveal="up" data-delay="3" data-tilt>
+              <div class="tilt-surface"><div class="tilt-content">
+                <span class="step-number">03</span><span class="step-icon" aria-hidden="true">↗</span>
+                <h3>貼り付けて接続</h3>
+                <p>画面下部の直接接続欄に貼り付けて「接続」。パルパゴス島へようこそ。</p>
+              </div></div>
+            </li>
+          </ol>
+        </div>
+
+        <div id="panel-console" class="tab-panel" role="tabpanel" aria-labelledby="tab-console" data-platform-panel="console" hidden>
+          <ol class="steps-grid">
+            <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">▣</span><h3>コミュニティサーバーを開く</h3><p>タイトル画面からマルチプレイを選び、「コミュニティサーバー」の一覧へ進みます。</p></div></div></li>
+            <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌕</span><h3>サーバー名で検索</h3><p>検索欄に「パルワールド コミュニティ」と入力して、同じ名前のサーバーを探します。</p></div></div></li>
+            <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">♡</span><h3>選んで参加</h3><p>サーバーを選択して接続します。見つからないときは下のFAQを確認してください。</p></div></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="join-address" data-reveal="scale">
+        <div><span>SERVER ADDRESS</span><code data-game-address>公開準備中</code></div>
+        <button class="button button--primary" type="button" data-copy-address disabled><span data-copy-label>アドレスをコピー</span><span class="copy-icon" aria-hidden="true"></span></button>
+      </div>
+      <p class="join-note">PC版は上のアドレスで直接接続できます。画面の名称はゲームの更新により少し異なる場合があります。</p>
+    </section>
+
+    <section class="section feature-section" id="features" aria-labelledby="features-title">
+      <div class="section-shell feature-layout">
+        <div class="feature-visual" data-reveal="left">
+          <div class="image-frame image-frame--portrait" data-tilt>
+            <div class="tilt-surface">
+              <img src="./assets/beginner-adventure.jpg" width="1920" height="1080" loading="lazy" alt="仲間とパルに乗って塔へ向かう冒険者たち">
+              <div class="image-frame__caption tilt-content"><span>BEGINNER FRIENDLY</span><strong>ひとりより、みんなで。</strong></div>
+            </div>
+          </div>
+          <div class="floating-badge" aria-hidden="true"><b>PAL</b><span>ADVENTURE</span></div>
+        </div>
+
+        <div class="feature-copy" data-reveal="right">
+          <p class="eyebrow"><span>02</span> EASY START</p>
+          <h2 id="features-title">序盤の「たいへん」を、<br>冒険の「たのしい」へ。</h2>
+          <p class="lead">成長や捕獲を少し遊びやすく調整。初めての人も、久しぶりに戻る人も、好きなペースで島の暮らしを始められます。</p>
+
+          <div class="preset-list">
+            <article class="preset-card">
+              <div class="preset-icon preset-icon--blue" aria-hidden="true">↑</div>
+              <div><h3>経験値 <strong>5倍</strong></h3><p>レベルが上がりやすく、序盤からいろいろなパルや装備を試せます。</p></div>
+            </article>
+            <article class="preset-card">
+              <div class="preset-icon preset-icon--yellow" aria-hidden="true">◉</div>
+              <div><h3>捕獲率 <strong>3.5倍</strong></h3><p>お気に入りのパルと出会ったとき、仲間にできるチャンスを増やしています。</p></div>
+            </article>
+            <article class="preset-card">
+              <div class="preset-icon preset-icon--coral" aria-hidden="true">♡</div>
+              <div><h3>デスペナルティ <strong>なし</strong></h3><p>失敗しても持ち物を落としません。未知の場所へ気軽に挑戦できます。</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section world-section" aria-labelledby="world-title">
+      <div class="section-shell">
+        <div class="section-intro section-intro--split" data-reveal="up">
+          <div><p class="eyebrow"><span>03</span> YOUR OWN STORY</p><h2 id="world-title">つくる。出会う。<br>予想外を楽しむ。</h2></div>
+          <p>巨大な拠点を育てるのも、遠くの塔を目指すのも自由。パルと仲間がいれば、毎日の景色が少しずつ物語になります。</p>
+        </div>
+
+        <div class="world-grid">
+          <article class="world-card world-card--wide" data-reveal="left" data-tilt>
+            <div class="tilt-surface">
+              <img src="./assets/base-building.jpg" width="1920" height="1080" loading="lazy" alt="たくさんのパルが働く大きな拠点">
+              <div class="world-card__overlay tilt-content"><span>BUILD TOGETHER</span><h3>仲間と育てる、ぼくらの拠点。</h3></div>
+            </div>
+          </article>
+          <article class="world-card world-card--tall" data-reveal="right" data-tilt>
+            <div class="tilt-surface">
+              <img src="./assets/lamball-team.jpg" width="1920" height="1080" loading="lazy" alt="個性豊かなパルたちとの賑やかな冒険">
+              <div class="world-card__overlay tilt-content"><span>EXPECT THE UNEXPECTED</span><h3>たまには、こんな大騒ぎも。</h3></div>
+            </div>
+          </article>
+          <article class="world-quote" data-reveal="scale">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>正解のない島だから、<br>あなたの遊び方が物語になる。</p>
+            <small>PALPAGOS ISLAND AWAITS</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section status-section" id="status" aria-labelledby="status-title">
-      <div class="section-heading">
-        <p class="eyebrow">リアルタイム情報</p>
-        <h2 id="status-title">サーバー状況</h2>
-        <p id="server-identity" class="server-identity">サーバー情報を読み込んでいます…</p>
-        <p id="status-message" class="status-message">接続状況を確認しています…</p>
-      </div>
-      <div class="status-grid">
-        <article class="card status-card">
-          <span class="status-indicator" id="status-indicator"></span>
-          <p class="label">ステータス</p>
-          <strong id="status-label">確認中</strong>
-          <small id="updated-at">—</small>
-        </article>
-        <article class="card"><p class="label">現在の参加者</p><strong id="player-count">—</strong><small>オンライン人数</small></article>
-        <article class="card"><p class="label">サーバー処理速度</p><strong id="server-fps">—</strong><small>1秒あたりの処理回数</small></article>
-        <article class="card"><p class="label">フレーム時間</p><strong id="frame-time">—</strong><small>1フレームの処理時間</small></article>
-        <article class="card"><p class="label">連続稼働時間</p><strong id="uptime">—</strong><small>現在の起動からの時間</small></article>
-        <article class="card"><p class="label">ワールド日数</p><strong id="world-days">—</strong><small>ゲーム内の日数</small></article>
+      <div class="section-shell">
+        <div class="status-heading" data-reveal="up">
+          <div>
+            <p class="eyebrow"><span>04</span> LIVE SERVER STATUS</p>
+            <h2 id="status-title">島の「いま」を、<br>リアルタイムで。</h2>
+          </div>
+          <div class="status-copy">
+            <p id="server-identity" class="server-identity">サーバー情報を読み込んでいます…</p>
+            <p id="status-message" class="status-message" role="status">接続状況を確認しています…</p>
+          </div>
+        </div>
+
+        <div class="status-overview" data-reveal="up" data-delay="1">
+          <article class="live-card live-card--primary">
+            <span class="metric-label">STATUS</span>
+            <div class="live-card__value"><i class="status-pulse" aria-hidden="true"></i><strong data-status-label>確認中</strong></div>
+            <small data-updated-at>最終更新 —</small>
+          </article>
+          <article class="live-card">
+            <span class="metric-label">PLAYERS</span>
+            <div class="live-card__value"><strong data-player-count>—</strong></div>
+            <small>最大32人まで参加できます</small>
+          </article>
+          <article class="live-card live-card--address">
+            <span class="metric-label">SERVER ADDRESS</span>
+            <div class="live-card__value"><code data-game-address>公開準備中</code></div>
+            <button type="button" data-copy-address disabled><span data-copy-label>コピー</span><span class="copy-icon" aria-hidden="true"></span></button>
+          </article>
+        </div>
+
+        <details class="technical-status" data-reveal="up">
+          <summary><span>詳しい稼働情報</span><small>サーバーの処理状態を見る</small><i aria-hidden="true"></i></summary>
+          <div class="status-metrics">
+            <article class="metric-card"><span>処理速度</span><strong id="server-fps">—</strong><small>1秒あたりの処理回数</small></article>
+            <article class="metric-card"><span>フレーム時間</span><strong id="frame-time">—</strong><small>1フレームの処理時間</small></article>
+            <article class="metric-card"><span>連続稼働時間</span><strong id="uptime">—</strong><small>現在の起動からの時間</small></article>
+            <article class="metric-card"><span>ワールド日数</span><strong id="world-days">—</strong><small>ゲーム内の日数</small></article>
+          </div>
+        </details>
       </div>
     </section>
 
-    <section class="section join-section" id="join" aria-labelledby="join-title">
-      <div>
-        <p class="eyebrow">参加する</p>
-        <h2 id="join-title">参加方法</h2>
-        <p>パルワールドのマルチプレイ画面から、以下のサーバーアドレスへ接続してください。</p>
-      </div>
-      <div class="address-panel">
-        <div class="address-box">
-          <span id="game-address">公開準備中</span>
-          <button id="copy-address" type="button" aria-describedby="address-feedback" disabled>公開準備中</button>
+    <section class="section players-section" id="players" aria-labelledby="players-title">
+      <div class="section-shell">
+        <div class="section-intro section-intro--split" data-reveal="up">
+          <div><p class="eyebrow"><span>05</span> EXPLORERS</p><h2 id="players-title">いま島にいる冒険者。</h2></div>
+          <p id="players-summary" class="players-summary">参加者情報を読み込んでいます…</p>
         </div>
-        <p id="address-feedback" class="address-feedback" role="status" aria-live="polite">サーバーアドレスは現在、公開準備中です。</p>
-      </div>
-      <p class="notice">接続先は公開完了後に表示されます。管理用の認証情報、非公開アドレス、アカウント識別子、座標などは外部へ送信しません。</p>
-    </section>
-
-    <section class="section players-section" aria-labelledby="players-title">
-      <div class="section-heading row-heading">
-        <div>
-          <p class="eyebrow">参加者</p>
-          <h2 id="players-title">現在の参加者</h2>
+        <div id="players-list" class="players-list" aria-live="polite" data-reveal="up">
+          <p class="empty">参加者情報を読み込んでいます…</p>
         </div>
-        <span id="players-summary" class="muted">—</span>
-      </div>
-      <div id="players-list" class="players-list" aria-live="polite">
-        <p class="empty">参加者情報を読み込んでいます…</p>
       </div>
     </section>
 
     <section class="section rules-section" id="rules" aria-labelledby="rules-title">
-      <p class="eyebrow">コミュニティルール</p>
-      <h2 id="rules-title">コミュニティルール</h2>
-      <ol id="rules-list" class="rules-list"></ol>
+      <div class="section-shell rules-layout">
+        <div class="rules-copy" data-reveal="left">
+          <p class="eyebrow"><span>06</span> COMMUNITY RULES</p>
+          <h2 id="rules-title">やさしさひとつで、<br>この島はもっと楽しい。</h2>
+          <p>むずかしい決まりはありません。画面の向こうにも同じ冒険者がいることを忘れず、気持ちよく遊びましょう。</p>
+          <div class="rules-sign"><span aria-hidden="true">♡</span><p><strong>初心者へのサポート歓迎</strong><small>困っている人を見かけたら、できる範囲で助け合おう。</small></p></div>
+        </div>
+        <ol id="rules-list" class="rules-list" data-reveal="right">
+          <li>他の参加者を尊重し、迷惑行為をしないでください。</li>
+          <li>不具合や不正利用を見つけた場合は運営に知らせてください。</li>
+          <li>建築・拠点はほかの参加者の活動を妨げない場所に設置してください。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-shell faq-layout">
+        <div data-reveal="left">
+          <p class="eyebrow"><span>07</span> FIRST AID</p>
+          <h2 id="faq-title">困ったときの<br>冒険ガイド。</h2>
+          <p>つながらないときも慌てなくて大丈夫。よくある原因を順番に確認してみてください。</p>
+        </div>
+        <div class="faq-list" data-reveal="right">
+          <details><summary>サーバーへ接続できません<i aria-hidden="true"></i></summary><div><p>まず上の「サーバー状況」がオンラインか確認してください。ゲーム本体を最新版へ更新し、PC版は <code>pal.xero-x.me:8211</code> を半角のコロンで入力します。</p></div></details>
+          <details><summary>サーバーが検索に出てきません<i aria-hidden="true"></i></summary><div><p>コミュニティサーバー一覧の検索欄で「パルワールド コミュニティ」を探してください。一覧の更新直後は表示まで少し時間がかかる場合があります。</p></div></details>
+          <details><summary>パルワールドが初めてでも参加できますか？<i aria-hidden="true"></i></summary><div><p>もちろん参加できます。経験値・捕獲率を遊びやすくし、デスペナルティも無効にしています。自分のペースで楽しんでください。</p></div></details>
+          <details><summary>個人情報や管理情報は公開されますか？<i aria-hidden="true"></i></summary><div><p>公開APIは読み取り専用です。管理用パスワード、アカウント識別子、座標などの非公開情報は、このページへ送信しません。</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="final-cta__media" data-depth="0.12" aria-hidden="true"><img src="./assets/hero-flight.jpg" width="1920" height="1080" loading="lazy" alt=""></div>
+      <div class="final-cta__glow" aria-hidden="true"></div>
+      <div class="section-shell final-cta__content" data-reveal="scale">
+        <p class="eyebrow">YOUR ADVENTURE STARTS HERE</p>
+        <h2 id="cta-title">次の物語は、<br>この島で。</h2>
+        <p>準備ができたら、アドレスをコピーして冒険を始めよう。</p>
+        <button class="button button--primary button--large" type="button" data-copy-address disabled><span data-copy-label>アドレスをコピー</span><span class="button-arrow" aria-hidden="true">→</span></button>
+        <code data-game-address>公開準備中</code>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <span>パルワールド コミュニティ公式ページ</span>
-    <span id="server-version"></span>
+  <footer class="site-footer">
+    <div class="section-shell footer-grid">
+      <a class="brand brand--footer" href="#top"><span class="brand-mark" aria-hidden="true"><span></span></span><span class="brand-copy"><strong>XERO</strong><small>PALWORLD COMMUNITY</small></span></a>
+      <div class="footer-links">
+        <a href="#join">参加方法</a><a href="#status">サーバー状況</a><a href="#rules">ルール</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-meta">
+        <span id="server-version"></span>
+        <p>本サイトはファンが運営する非公式コミュニティサイトです。Pocketpair, Inc. および『Palworld / パルワールド』の公式サイトではありません。</p>
+        <p>ゲーム画像 © Pocketpair, Inc. / <a href="https://store.steampowered.com/app/1623730/Palworld/" rel="external">公式Steamページ</a> / <a href="https://www.pocketpair.jp/en/guidelines-derivativework-en/" rel="external">二次創作ガイドライン</a></p>
+      </div>
+    </div>
   </footer>
-  <script src="./app.js?v=20260711-5" defer></script>
+
+  <script src="./app.js?v=20260711-6" defer></script>
+  <script src="./motion.js?v=20260711-1" defer></script>
 </body>
 </html>
