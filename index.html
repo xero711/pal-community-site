@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050b14">
-  <meta name="description" content="初心者歓迎の非公式パルワールド・コミュニティサーバー。リアルタイムの稼働状況を確認し、ゲーム内のコミュニティサーバー一覧から名前で参加できます。">
+  <meta name="description" content="初心者歓迎の非公式パルワールド・コミュニティサーバー。リアルタイムの稼働状況を確認して、218.183.35.208:8211 から参加できます。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="XERO PALWORLD COMMUNITY">
-  <meta property="og:title" content="XERO PALWORLD COMMUNITY｜初心者歓迎">
+  <meta property="og:site_name" content="Xero PALServer">
+  <meta property="og:title" content="Xero PALServer｜初心者歓迎">
   <meta property="og:description" content="はじめてでも大丈夫。仲間と一緒に、パルパゴス島の冒険を始めよう。">
   <meta property="og:url" content="https://community.xero-x.me/">
   <meta property="og:image" content="https://community.xero-x.me/assets/og-community.png">
@@ -17,14 +17,14 @@
   <meta property="og:image:height" content="933">
   <meta property="og:image:alt" content="夜明けの島を望む冒険者たちと、XERO PALWORLD COMMUNITY 初心者歓迎の文字">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="XERO PALWORLD COMMUNITY｜初心者歓迎">
+  <meta name="twitter:title" content="Xero PALServer｜初心者歓迎">
   <meta name="twitter:description" content="はじめてでも大丈夫。仲間と一緒に、パルパゴス島の冒険を始めよう。">
   <meta name="twitter:image" content="https://community.xero-x.me/assets/og-community.png">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://pal-api.xero-x.me; img-src 'self' data:; script-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'; frame-ancestors 'none'">
   <link rel="canonical" href="https://community.xero-x.me/">
   <link rel="preload" as="image" href="./assets/hero-flight.jpg" fetchpriority="high">
-  <link rel="stylesheet" href="./site.css?v=20260711-7">
-  <title>XERO PALWORLD COMMUNITY｜初心者歓迎</title>
+  <link rel="stylesheet" href="./site.css?v=20260711-8">
+  <title>Xero PALServer｜初心者歓迎</title>
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へ移動</a>
@@ -59,7 +59,7 @@
     <div class="hero-layout section-shell">
       <div class="hero-copy" data-reveal="up">
         <div class="hero-kicker"><span class="kicker-dot" aria-hidden="true"></span>非公式ファン運営・初心者歓迎</div>
-        <p class="community-label" id="community-name">パルワールド コミュニティ</p>
+        <p class="community-label" id="community-name">Xero PALServer</p>
         <h1><span class="hero-line hero-line--light">はじめてでも、</span><span class="hero-line hero-line--accent">この世界が好きになる。</span></h1>
         <p class="hero-tagline" id="community-tagline">みんなでつくる、安心して遊べるパルワールドサーバー。</p>
         <div class="hero-actions">
@@ -81,13 +81,13 @@
           <span class="live-pill"><span class="status-indicator" id="status-indicator"></span><strong id="status-label">確認中</strong></span>
           <span class="quick-join__players"><b id="player-count">—</b> PLAYERS</span>
         </div>
-        <p class="quick-join__eyebrow">ポート番号の入力なし</p>
-        <p class="quick-join__title">サーバー名でかんたん参加</p>
-        <div class="server-address server-search">
-          <strong data-community-name>パルワールド コミュニティ</strong>
-          <a class="button button--primary" href="#join">参加方法を見る</a>
+        <p class="quick-join__eyebrow">直接接続アドレス</p>
+        <p class="quick-join__title">コピーして、すぐ参加</p>
+        <div class="server-address">
+          <code data-game-address>218.183.35.208:8211</code>
+          <button type="button" data-copy-address disabled><span class="copy-icon" aria-hidden="true"></span><span data-copy-label>準備中</span></button>
         </div>
-        <p class="address-feedback">ゲーム内の「コミュニティサーバー」で、上の名前を検索します。</p>
+        <p class="address-feedback" data-copy-feedback>PC版は上のアドレスをコピーして直接接続できます。</p>
         <div class="quick-join__footer">
           <span><i aria-hidden="true"></i>最大32人</span>
           <span id="updated-at" data-updated-at>最終更新 —</span>
@@ -116,23 +116,23 @@
           <ol class="steps-grid">
             <li class="step-card" data-reveal="up" data-delay="1" data-tilt>
               <div class="tilt-surface"><div class="tilt-content">
-                <span class="step-number">01</span><span class="step-icon" aria-hidden="true">▣</span>
-                <h3>コミュニティサーバーを開く</h3>
-                <p>タイトル画面からマルチプレイを選び、「コミュニティサーバー」の一覧へ進みます。</p>
+                <span class="step-number">01</span><span class="step-icon" aria-hidden="true">⌁</span>
+                <h3>アドレスをコピー</h3>
+                <p><code data-game-address>218.183.35.208:8211</code> をボタンからコピーします。</p>
               </div></div>
             </li>
             <li class="step-card" data-reveal="up" data-delay="2" data-tilt>
               <div class="tilt-surface"><div class="tilt-content">
-                <span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌕</span>
-                <h3>サーバー名で検索</h3>
-                <p>検索欄に「<span data-community-name>パルワールド コミュニティ</span>」と入力して、同じ名前のサーバーを探します。</p>
+                <span class="step-number">02</span><span class="step-icon" aria-hidden="true">▷</span>
+                <h3>マルチプレイを開く</h3>
+                <p>タイトル画面から「マルチプレイに参加する」を選び、専用サーバー一覧を開きます。</p>
               </div></div>
             </li>
             <li class="step-card" data-reveal="up" data-delay="3" data-tilt>
               <div class="tilt-surface"><div class="tilt-content">
-                <span class="step-number">03</span><span class="step-icon" aria-hidden="true">♡</span>
-                <h3>選んで参加</h3>
-                <p>サーバーを選択して接続します。ポート番号を入力する必要はありません。</p>
+                <span class="step-number">03</span><span class="step-icon" aria-hidden="true">↗</span>
+                <h3>貼り付けて接続</h3>
+                <p>画面下部の直接接続欄に貼り付けて「接続」を選びます。</p>
               </div></div>
             </li>
           </ol>
@@ -141,23 +141,18 @@
         <div id="panel-console" class="tab-panel" role="tabpanel" aria-labelledby="tab-console" data-platform-panel="console" hidden>
           <ol class="steps-grid">
             <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">▣</span><h3>コミュニティサーバーを開く</h3><p>タイトル画面からマルチプレイを選び、「コミュニティサーバー」の一覧へ進みます。</p></div></div></li>
-            <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌕</span><h3>サーバー名で検索</h3><p>検索欄に「<span data-community-name>パルワールド コミュニティ</span>」と入力して、同じ名前のサーバーを探します。</p></div></div></li>
+            <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">⌕</span><h3>サーバー名で検索</h3><p>検索欄に「<span data-community-name>Xero PALServer</span>」と入力して、同じ名前のサーバーを探します。</p></div></div></li>
             <li class="step-card" data-tilt><div class="tilt-surface"><div class="tilt-content"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">♡</span><h3>選んで参加</h3><p>サーバーを選択して接続します。見つからないときは下のFAQを確認してください。</p></div></div></li>
           </ol>
         </div>
       </div>
 
-      <details class="technical-status direct-connect-fallback" data-reveal="scale">
-        <summary><span>一覧で見つからないとき（PC版の直接接続）</span><small>予備の接続方法を表示</small><i aria-hidden="true"></i></summary>
-        <div class="direct-connect-fallback__body">
-          <div class="join-address">
-            <div><span>直接接続用アドレス</span><code id="game-address" data-game-address>公開準備中</code></div>
-            <button id="copy-address" class="button button--primary" type="button" data-copy-address aria-describedby="address-feedback" disabled><span data-copy-label>アドレスをコピー</span><span class="copy-icon" aria-hidden="true"></span></button>
-          </div>
-          <p id="address-feedback" class="address-feedback" role="status" aria-live="polite">直接接続用アドレスを確認しています。</p>
-        </div>
-      </details>
-      <p class="join-note">通常はコミュニティサーバー一覧から名前で参加でき、ポート番号の入力は不要です。画面の名称はゲームの更新により少し異なる場合があります。</p>
+      <div class="join-address" data-reveal="scale">
+        <div><span>直接接続用アドレス</span><code id="game-address" data-game-address>218.183.35.208:8211</code></div>
+        <button id="copy-address" class="button button--primary" type="button" data-copy-address aria-describedby="address-copy-feedback" disabled><span data-copy-label>アドレスをコピー</span><span class="copy-icon" aria-hidden="true"></span></button>
+      </div>
+      <p id="address-copy-feedback" class="address-feedback" data-copy-feedback role="status" aria-live="polite">サーバーアドレスをコピーして参加できます。</p>
+      <p class="join-note">PC版は上のアドレスで直接接続できます。Xbox / PS5版はコミュニティサーバー一覧でサーバー名を検索してください。</p>
     </section>
 
     <section class="section feature-section" id="features" aria-labelledby="features-title">
@@ -248,10 +243,10 @@
             <div class="live-card__value"><strong data-player-count>—</strong></div>
             <small>最大32人まで参加できます</small>
           </article>
-          <article class="live-card">
-            <span class="metric-label">参加方法</span>
-            <div class="live-card__value"><strong>一覧で名前検索</strong></div>
-            <small data-community-name>パルワールド コミュニティ</small>
+          <article class="live-card live-card--address">
+            <span class="metric-label">接続アドレス</span>
+            <div class="live-card__value"><code data-game-address>218.183.35.208:8211</code></div>
+            <button type="button" data-copy-address disabled><span data-copy-label>コピー</span><span class="copy-icon" aria-hidden="true"></span></button>
           </article>
         </div>
 
@@ -303,9 +298,9 @@
           <p>つながらないときも慌てなくて大丈夫。よくある原因を順番に確認してみてください。</p>
         </div>
         <div class="faq-list" data-reveal="right">
-          <details><summary>サーバーへ接続できません<i aria-hidden="true"></i></summary><div><p>まず上の「サーバー状況」がオンラインか確認してください。ゲーム本体を最新版へ更新し、コミュニティサーバー一覧で「<span data-community-name>パルワールド コミュニティ</span>」を検索します。見つからない場合は、参加方法にあるPC版の直接接続を開いてください。</p></div></details>
-          <details><summary>サーバーが検索に出てきません<i aria-hidden="true"></i></summary><div><p>コミュニティサーバー一覧の検索欄で「<span data-community-name>パルワールド コミュニティ</span>」を探してください。一覧の更新直後は表示まで少し時間がかかる場合があります。</p></div></details>
-          <details><summary>ドメインだけで直接接続できますか？<i aria-hidden="true"></i></summary><div><p>パルワールドの直接接続はポート番号も必要です。マインクラフトのようなポート自動検出には対応していないため、ポート入力を省きたい場合はコミュニティサーバー一覧から名前で参加してください。</p></div></details>
+          <details><summary>サーバーへ接続できません<i aria-hidden="true"></i></summary><div><p>まず上の「サーバー状況」がオンラインか確認してください。ゲーム本体を最新版へ更新し、PC版は <code data-game-address>218.183.35.208:8211</code> を半角のコロンで入力します。</p></div></details>
+          <details><summary>サーバーが検索に出てきません<i aria-hidden="true"></i></summary><div><p>コミュニティサーバー一覧の検索欄で「<span data-community-name>Xero PALServer</span>」を探してください。一覧の更新直後は表示まで少し時間がかかる場合があります。</p></div></details>
+          <details><summary>直接接続のアドレスは？<i aria-hidden="true"></i></summary><div><p>PC版の接続先は <code data-game-address>218.183.35.208:8211</code> です。IPアドレスとポート番号をまとめて入力してください。</p></div></details>
           <details><summary>パルワールドが初めてでも参加できますか？<i aria-hidden="true"></i></summary><div><p>もちろん参加できます。経験値・捕獲率を遊びやすくし、デスペナルティも無効にしています。自分のペースで楽しんでください。</p></div></details>
           <details><summary>個人情報や管理情報は公開されますか？<i aria-hidden="true"></i></summary><div><p>公開APIは読み取り専用です。管理用パスワード、アカウント識別子、座標などの非公開情報は、このページへ送信しません。</p></div></details>
         </div>
@@ -318,9 +313,9 @@
       <div class="section-shell final-cta__content" data-reveal="scale">
         <p class="eyebrow">冒険の準備はここから</p>
         <h2 id="cta-title">次の物語は、<br>この島で。</h2>
-        <p>ゲーム内のコミュニティサーバー一覧から、名前で参加できます。</p>
-        <a class="button button--primary button--large" href="#join">参加方法を見る<span class="button-arrow" aria-hidden="true">→</span></a>
-        <code data-community-name>パルワールド コミュニティ</code>
+        <p>アドレスをコピーして、パルパゴス島の冒険を始めよう。</p>
+        <button class="button button--primary button--large" type="button" data-copy-address disabled><span data-copy-label>アドレスをコピー</span><span class="button-arrow" aria-hidden="true">→</span></button>
+        <code data-game-address>218.183.35.208:8211</code>
       </div>
     </section>
   </main>
@@ -339,7 +334,7 @@
     </div>
   </footer>
 
-  <script src="./app.js?v=20260711-6" defer></script>
+  <script src="./app.js?v=20260711-7" defer></script>
   <script src="./motion.js?v=20260711-2" defer></script>
 </body>
 </html>

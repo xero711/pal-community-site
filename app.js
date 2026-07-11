@@ -7,9 +7,9 @@
   const maximumBackoffMs = 120000;
   const jitterRatio = 0.12;
   const pendingAddress = "公開準備中";
-  const fallbackAddress = "pal.xero-x.me:8211";
+  const fallbackAddress = "218.183.35.208:8211";
   const fallbackCommunity = Object.freeze({
-    name: "パルワールド コミュニティ",
+    name: "Xero PALServer",
     tagline: "みんなでつくる、安心して遊べるパルワールドサーバー。",
     gameAddress: fallbackAddress,
     rules: [

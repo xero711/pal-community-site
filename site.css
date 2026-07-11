@@ -352,8 +352,6 @@ h2 { font-size: clamp(2.25rem, 5.4vw, 4.8rem); letter-spacing: -.055em; }
 .quick-join__title { position: relative; margin: 0 0 1rem; font-size: clamp(1.35rem, 2.4vw, 1.85rem); font-weight: 900; letter-spacing: -.035em; }
 .server-address { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .65rem; padding: .55rem; border: 1px solid var(--line-strong); border-radius: .9rem; background: rgba(2,12,20,.64); }
 .server-address code { min-width: 0; overflow-wrap: anywhere; padding-left: .5rem; color: var(--cyan); font-size: clamp(.77rem, 1.25vw, .94rem); font-weight: 800; }
-.server-search strong { min-width: 0; overflow-wrap: anywhere; padding-left: .5rem; color: var(--cyan); font-size: clamp(.82rem, 1.3vw, 1rem); font-weight: 900; }
-.server-search .button { min-height: 2.75rem; padding: .55rem .8rem; white-space: nowrap; }
 .server-address button, .live-card--address button {
   display: inline-flex;
   align-items: center;
@@ -417,10 +415,6 @@ h2 { font-size: clamp(2.25rem, 5.4vw, 4.8rem); letter-spacing: -.055em; }
 .join-address > div { display: grid; min-width: 0; }
 .join-address > div span { color: var(--text-3); font-size: .62rem; font-weight: 900; letter-spacing: .18em; }
 .join-address code { color: var(--cyan); font-size: clamp(.9rem, 2vw, 1.14rem); font-weight: 900; overflow-wrap: anywhere; }
-.direct-connect-fallback { max-width: 54rem; margin: 1.25rem auto 0; }
-.direct-connect-fallback__body { padding: 1rem; border-top: 1px solid var(--line); }
-.direct-connect-fallback .join-address { max-width: none; margin: 0; }
-.direct-connect-fallback .address-feedback { margin-bottom: 0; }
 .join-note { max-width: 52rem; margin: .8rem auto 0; color: var(--text-3); font-size: .78rem; text-align: center; }
 
 /* Beginner features */
@@ -695,7 +689,7 @@ html[data-server-state="error"] .status-pulse::after { border-color: var(--spark
   .quick-join { border-radius: 1.4rem; }
   .quick-join__topline { align-items: flex-start; }
   .server-address { grid-template-columns: 1fr; }
-  .server-address .button { justify-content: center; width: 100%; }
+  .server-address button { justify-content: center; width: 100%; }
   .quick-join__footer { align-items: flex-start; flex-direction: column; }
   .tab-list { width: 100%; }
   .tab-list button { width: 50%; padding-inline: .45rem; font-size: .78rem; }
