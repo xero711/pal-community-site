@@ -4,9 +4,9 @@
 
 公開対象は `index.html`、`site.css`、`app.js`、`motion.js`、`assets/` です。PalServer設定、REST API認証情報、Cloudflare資格情報、ワールドデータは含みません。ゲーム画像の出典と利用方針は `assets/SOURCES.md` に記録しています。
 
-ゲームへの接続先は `pal.xero-x.me:8211` です。GitHub PagesはWeb画面、`pal-api.xero-x.me` は安全な公開API、`pal.xero-x.me:8211` はPalworldゲーム接続という役割分担です。
+通常の参加はゲーム内のコミュニティサーバー一覧で「パルワールド コミュニティ」を検索します。この方法ならポート番号の入力は不要です。PC版の直接接続が必要な場合は `pal.xero-x.me:8211` を使用します。GitHub PagesはWeb画面、`pal-api.xero-x.me` は安全な公開API、`pal.xero-x.me:8211` はPalworldゲーム接続という役割分担です。
 
-GitHub PagesやDNS自体はPalworldのUDPゲーム通信を中継しません。ゲーム接続は `pal.xero-x.me` のDNSが指定するサーバーへ直接行われます。
+GitHub PagesやDNS自体はパルワールドのUDPゲーム通信を中継しません。パルワールドはマインクラフト式のDNS SRVによるポート自動検出を公式サポートしていないため、直接接続ではポート番号が必要です。ゲーム接続は `pal.xero-x.me` のDNSが指定するサーバーへ直接行われます。
 
 ページは外部ライブラリに依存せず、読み取り専用APIのオンライン・オフライン・取得失敗を分けて表示します。モーションは `prefers-reduced-motion`、Save-Data、端末性能、タブの表示状態を考慮して自動的に軽量化します。
 
