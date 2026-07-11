@@ -170,6 +170,11 @@
         }
       };
       const reset = () => {
+        if (frame) {
+          cancelAnimationFrame(frame);
+          pendingFrames.delete(frame);
+          frame = 0;
+        }
         bounds = null;
         surface.style.setProperty("--tilt-x", "0deg");
         surface.style.setProperty("--tilt-y", "0deg");
